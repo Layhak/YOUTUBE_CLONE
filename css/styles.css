@@ -1,0 +1,254 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: var(--dark-gray);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --accent-color: rgb(204, 0, 0);
+  --lightest-gray: rgb(244, 244, 244);
+  --light-gray: rgb(144, 144, 144);
+  --medium-gray: rgb(96, 96, 96);
+  --dark-gray: rgb(13, 13, 13);
+  --header-height: 40px;
+  --animation-duration: 200ms;
+  --animation-timing-curve: ease-in-out;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  background-color: var(--dark-gray);
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, .4);
+  align-items: center;
+  padding: 5px;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 2;
+
+
+}
+
+/*todo| select all div that stay in header element */
+.header>div {
+  display: flex;
+  margin-left: 1rem;
+}
+
+/*todo| select the first div contiant in the header element */
+.header>div:nth-child(1)>a {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 4px;
+}
+
+.header>div:nth-child(1)>a::after {
+  content: 'kh';
+  position: absolute;
+  top: 5px;
+  right: -10px;
+  width: 10px;
+  height: 10px;
+  font-size: 8px;
+  text-transform: uppercase;
+  color: var(--light-gray);
+}
+
+/*todo| stlye all element that have in div but skip the first  */
+.header>div>*+* {
+  margin-left: 5px;
+}
+
+
+
+
+/* todo child number 2 */
+
+.header>div:nth-child(2) {
+  display: flex;
+  align-items: center;
+  width: 600px;
+}
+
+.header>div:nth-child(2)>div[class="search-bar"] {
+  display: flex;
+  align-items: center;
+  border: none;
+}
+
+/*todo select input style */
+
+div[class="icon"] {
+  visibility: hidden;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+div[class="input-icon"] {
+  position: relative;
+}
+
+
+
+
+
+
+
+.header>div>div[class="input-icon"]>input {
+  width: 500px;
+  padding: 11px;
+  margin-left: 20px;
+  background-color: transparent;
+  border-radius: 50px 0 0 50px;
+  color: var(--lightest-gray);
+  font-size: 18px;
+  letter-spacing: 1px;
+  outline: none;
+  border: 1px solid hsl(0, 0%, 34%);
+}
+
+input:focus {
+  border: 1px solid hsl(210, 80%, 50%) !important;
+  border-left: none !important;
+  border-radius: 0 !important;
+  padding-left: 3% !important;
+}
+
+input:focus+div[class="icon"] {
+  visibility: visible;
+  border: 1px solid hsl(210, 80%, 50%);
+  width: 30px;
+  padding: 9.8px 10px 9.5px 10px;
+  border-radius: 50px 0 0 50px;
+  border-right: none;
+
+
+}
+
+button[class="search"] {
+  cursor: pointer;
+  border: none;
+  border-radius: 0 50px 50px 0;
+  background-color: hsl(0, 0%, 34%);
+  padding: 10.7px;
+  margin: 0;
+}
+
+
+
+.header>div:nth-child(2)>button[class="mic"] {
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: hsl(0, 0%, 10%);
+  padding: 10px;
+}
+
+.header>div:nth-child(2)>button:hover {
+  background-color: hsl(0, 0%, 34%);
+}
+
+.header>div:nth-child(3)>button {
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  cursor: pointer;
+  background-color: transparent;
+  margin: 8px !important;
+}
+
+
+button[class="right-content-btn"]:hover {
+  background-color: hsl(0, 0%, 34%) !important;
+}
+
+.header div:nth-child(2)>.menu-icon-btn {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.menu-icon-btn {
+  border: none;
+  padding: 5px;
+  background-color: transparent;
+  fill: var(--lightest-gray);
+  cursor: pointer;
+}
+
+.menu-icon-btn svg {
+  width: 30px;
+}
+
+.menu-icon-btn:hover {
+  border-radius: 50%;
+  background-color: hsl(0, 0%, 34%);
+}
+
+
+
+.menu-icon-btn+a {
+  text-decoration: none;
+  color: White;
+  font-weight: 550;
+  font-size: 20px;
+  font-family: sans-serif;
+
+}
+
+.menu-icon-btn+a>img {
+  width: 34px;
+}
+
+.show-icon {
+  display: block !important;
+}
+
+
+.menu-button {
+  position: fixed;
+  display: flex;
+  top: 4rem;
+  /* left: 7rem; */
+  gap: 1rem;
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  /* margin: 10px; */
+  background-color: var(--dark-gray);
+  overflow-x: auto;
+}
+
+.menu-button>button {
+  background-color: hsla(0, 0%, 40%, 0.385);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: #fff;
+  padding: 0 1rem;
+  font-size: 1rem;
+}
+
+.menu-button>button:hover {
+  background-color: hsla(0, 0%, 60%, 0.385);
+}
+
+.menu-button>button:nth-child(1) {
+  margin-left: 1.5rem;
+}
+
+.fixed-nav {
+  display: flex;
+  flex-direction: column;
+}
