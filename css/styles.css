@@ -26,32 +26,30 @@ body {
   display: flex;
   width: 100%;
   background-color: var(--dark-gray);
-  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, .4);
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.4);
   align-items: center;
   padding: 5px;
   justify-content: space-between;
   position: fixed;
   z-index: 2;
-
-
 }
 
 /*todo| select all div that stay in header element */
-.header>div {
+.header > div {
   display: flex;
   margin-left: 1rem;
 }
 
 /*todo| select the first div contiant in the header element */
-.header>div:nth-child(1)>a {
+.header > div:nth-child(1) > a {
   display: flex;
   align-items: center;
   position: relative;
   gap: 4px;
 }
 
-.header>div:nth-child(1)>a::after {
-  content: 'kh';
+.header > div:nth-child(1) > a::after {
+  content: "kh";
   position: absolute;
   top: 5px;
   right: -10px;
@@ -63,22 +61,19 @@ body {
 }
 
 /*todo| stlye all element that have in div but skip the first  */
-.header>div>*+* {
+.header > div > * + * {
   margin-left: 5px;
 }
 
-
-
-
 /* todo child number 2 */
 
-.header>div:nth-child(2) {
+.header > div:nth-child(2) {
   display: flex;
   align-items: center;
   width: 600px;
 }
 
-.header>div:nth-child(2)>div[class="search-bar"] {
+.header > div:nth-child(2) > div[class="search-bar"] {
   display: flex;
   align-items: center;
   border: none;
@@ -97,13 +92,7 @@ div[class="input-icon"] {
   position: relative;
 }
 
-
-
-
-
-
-
-.header>div>div[class="input-icon"]>input {
+.header > div > div[class="input-icon"] > input {
   width: 500px;
   padding: 11px;
   margin-left: 20px;
@@ -123,15 +112,13 @@ input:focus {
   padding-left: 3% !important;
 }
 
-input:focus+div[class="icon"] {
+input:focus + div[class="icon"] {
   visibility: visible;
   border: 1px solid hsl(210, 80%, 50%);
   width: 30px;
   padding: 9.8px 10px 9.5px 10px;
   border-radius: 50px 0 0 50px;
   border-right: none;
-
-
 }
 
 button[class="search"] {
@@ -143,9 +130,7 @@ button[class="search"] {
   margin: 0;
 }
 
-
-
-.header>div:nth-child(2)>button[class="mic"] {
+.header > div:nth-child(2) > button[class="mic"] {
   border: none;
   border-radius: 50%;
   cursor: pointer;
@@ -153,11 +138,11 @@ button[class="search"] {
   padding: 10px;
 }
 
-.header>div:nth-child(2)>button:hover {
+.header > div:nth-child(2) > button:hover {
   background-color: hsl(0, 0%, 34%);
 }
 
-.header>div:nth-child(3)>button {
+.header > div:nth-child(3) > button {
   border: none;
   border-radius: 50%;
   width: 40px;
@@ -168,12 +153,11 @@ button[class="search"] {
   margin: 8px !important;
 }
 
-
 button[class="right-content-btn"]:hover {
   background-color: hsl(0, 0%, 34%) !important;
 }
 
-.header div:nth-child(2)>.menu-icon-btn {
+.header div:nth-child(2) > .menu-icon-btn {
   background: none;
   border: none;
   padding: 0;
@@ -196,25 +180,21 @@ button[class="right-content-btn"]:hover {
   background-color: hsl(0, 0%, 34%);
 }
 
-
-
-.menu-icon-btn+a {
+.menu-icon-btn + a {
   text-decoration: none;
   color: White;
   font-weight: 550;
   font-size: 20px;
   font-family: sans-serif;
-
 }
 
-.menu-icon-btn+a>img {
+.menu-icon-btn + a > img {
   width: 34px;
 }
 
 .show-icon {
   display: block !important;
 }
-
 
 .menu-button {
   position: fixed;
@@ -230,21 +210,22 @@ button[class="right-content-btn"]:hover {
   overflow-x: auto;
 }
 
-.menu-button>button {
+.menu-button > button {
   background-color: hsla(0, 0%, 40%, 0.385);
   border: none;
   outline: none;
   border-radius: 5px;
+  white-space: nowrap;
   color: #fff;
   padding: 0 1rem;
   font-size: 1rem;
 }
 
-.menu-button>button:hover {
+.menu-button > button:hover {
   background-color: hsla(0, 0%, 60%, 0.385);
 }
 
-.menu-button>button:nth-child(1) {
+.menu-button > button:nth-child(1) {
   margin-left: 1.5rem;
 }
 
