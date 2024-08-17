@@ -61,10 +61,13 @@
 } */
 
 .sidebar-icon {
-  width: 25px;
-  height: 25px;
-  flex-shrink: 0;
+  width: 25px; /* Fixed width */
+  height: 25px; /* Fixed height */
+  flex-shrink: 0 !important; /* Prevent flexbox from resizing */
 }
+
+
+
 
 .sidebar-list .hidden-sidebar {
   margin-left: 1.5rem;

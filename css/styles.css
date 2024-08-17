@@ -172,7 +172,7 @@ button[class="right-content-btn"]:hover {
 }
 
 .menu-icon-btn svg {
-  width: 30px;
+  width: 24px;
 }
 
 .menu-icon-btn:hover {
@@ -189,7 +189,7 @@ button[class="right-content-btn"]:hover {
 }
 
 .menu-icon-btn + a > img {
-  width: 34px;
+  width: 24px;
 }
 
 .show-icon {
